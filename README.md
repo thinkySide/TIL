@@ -1,4 +1,4 @@
-## Today I Learned
+## 🧢 Today I Learned
     Since 23.02.12 ~
 <hr>
 
