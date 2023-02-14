@@ -1,3 +1,11 @@
-- 전체 파일 커밋: git add .
-- 커밋 메시지 작성: git commit -m "Your message"
-- Push: git push
+## Github Terminal Command Guide
+#### 1. Commit all file
+    git . add
+
+
+#### 2. Commit message
+    git commit -m "Your message"
+
+
+#### 3. Push
+    git push
