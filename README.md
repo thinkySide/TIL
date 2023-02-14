@@ -5,4 +5,3 @@
 ### Basic
 - [Markdown Guide](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 - [Github Terminal Command Guide](https://github.com/thinkySide/TIL/blob/b77959f8875ecfc9d976809b8e643fa7bbd8d0cb/Github/CommandGuide.md)
-- 이건 한번에 되기를!
