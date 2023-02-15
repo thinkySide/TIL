@@ -12,6 +12,6 @@
 ***
 
 
-## Pattern
-- [Singleton 싱글톤](Swift/Singleton.md)
+## Design Pattern
+- [Singleton 싱글톤](Design%20Pattern/Singleton.md)
 ***
