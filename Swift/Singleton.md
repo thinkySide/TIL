@@ -2,7 +2,7 @@
 
 ## 사용 목적
 인스턴스(객체)를 하나만 만들어 공유해서 사용.
-***
+
 
 
 ## Swift에서 Singleton 만들기
@@ -21,7 +21,7 @@ class Singleton {
 // Singleton 생성
 let singleton = Singleton.shared
 ```
-***
+
 
 ## Struct로는 만들 수 없을까?
 struct(구조체)는 인스턴스를 value(값)타입으로 생성한다.   
