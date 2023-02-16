@@ -9,6 +9,7 @@
 
 
 ## Swift
+- [Type Casting 타입 캐스팅](Swift/Type%20Casting.md)
 - [Memory Structure 메모리 구조](Swift/Memory%20Structure.md)
 ***
 
