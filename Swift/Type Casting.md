@@ -1,4 +1,4 @@
-# Type Casting
+# Type Casting 타입 캐스팅
 
 ## Upcasting
 업캐스팅은 상위 데이터를 모두 가지고 있는 것이 확실하기 때문에, 항상 성공한다.
