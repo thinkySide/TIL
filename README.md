@@ -3,12 +3,13 @@
 ***
 
 ## Basic
-- [Markdown Guide 마크다운 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+- [Markdown Guide 마크다운 작성법 / 외부링크](https://gist.github.com/ihoneymon/652be052a0727ad59601)
 - [Github Terminal Command Guide 깃헙 터미널 커맨드](Github/CommandGuide.md)
 ***   
 
 
 ## Swift
+- [The Swift Language Guide in Korean / 외부링크](https://jusung.gitbook.io/the-swift-language-guide/)
 - [Closure 클로저](Swift/Closure.md)
 - [Copy on Write 값 변경 복사 방식](Swift/Copy%20on%20Write.md)
 - [Memory Structure 메모리 구조](Swift/Memory%20Structure.md)

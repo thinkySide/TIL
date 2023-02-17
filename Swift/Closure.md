@@ -107,3 +107,16 @@ incrementer() // 20
 incrementer() // 30
 ~~~
 
+## @escaping closure
+- 함수의 실행이 종료되면 파라미터로 쓰이는 closure도 함께 제거된다. 하지만 @escaping 키워드를 명시하면 함수에서 탈출 시킬 수 있게 된다.    
+**즉, 함수가 종료되어도 closure는 존재하게 되는 것.**
+
+아래 코드는 Swift 공식문서에서 설명하는 @escaping 사용 예제이다.
+~~~swift
+var completionHandlers: [() -> Void] = [] // 함수를 배열로 가지고 있는 변수
+
+func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+    completionHandlers.append(completionHandler) // 외부 변수 comletionHandlers에 파라미터로 받은 closure인 completionHandler를 append 하고 있다. (외부로 탈출시켜야함.)
+}
+~~~
+- @escaping 키워드를 사용하는 클로저에서는 self를 붙여주어야 한다.
