@@ -110,13 +110,54 @@ incrementer() // 30
 ## @escaping closure
 - 함수의 실행이 종료되면 파라미터로 쓰이는 closure도 함께 제거된다. 하지만 @escaping 키워드를 명시하면 함수에서 탈출 시킬 수 있게 된다.    
 **즉, 함수가 종료되어도 closure는 존재하게 되는 것.**
+- 클로저를 외부 변수에 저장, 비동기 처리 등에 사용 된다.
+- @escaping 키워드를 사용하는 클로저에서는 self를 붙여주어야 한다.
 
 아래 코드는 Swift 공식문서에서 설명하는 @escaping 사용 예제이다.
 ~~~swift
 var completionHandlers: [() -> Void] = [] // 함수를 배열로 가지고 있는 변수
 
+// escaping closure
 func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
     completionHandlers.append(completionHandler) // 외부 변수 comletionHandlers에 파라미터로 받은 closure인 completionHandler를 append 하고 있다. (외부로 탈출시켜야함.)
 }
+
+// non-escaping closure
+func someFunctionWithNonescapingClosure(closure: () -> Void) {
+    closure()    // 함수 안에서 끝나는 클로저
+}
+
+
+class SomeClass {
+    
+    var x = 10
+    
+    func doSomething() {
+        someFunctionWithEscapingClosure { self.x = 100 } // 명시적으로 self를 적어줘야 합니다.
+        someFunctionWithNonescapingClosure { x = 200 } // 얘는 안적어줘도 된다.
+    }
+    
+}
 ~~~
-- @escaping 키워드를 사용하는 클로저에서는 self를 붙여주어야 한다.
+
+## Capture List 캡처 리스트
+위에서 말한 closure의 캡처현상은 메모리 주소를 보관하게 된다. 만약 값의 메모리 주소를 복사해 공유하는 것이 아닌, 복사하고 싶다면 캡처리스트를 사용하면 된다.
+~~~swift
+var myDog = "아무개"
+
+// 1. 원래 형태의 closure (메모리 주소 보관)
+let someClosure = {
+    print(myDog)
+}
+
+myDog = "민톨"
+someClosure() // 민톨
+
+// 2. 캡처리스트를 사용한 closure (값 복사, 캡처)
+let someCaptureClosure = { [myDog] in
+    print(myDog)
+}
+
+myDog = "해피"
+someCaptureClosure() // 민톨 (클로저에서 캡처한 myDog을 사용하고 있음)
+~~~
