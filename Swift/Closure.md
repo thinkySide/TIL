@@ -2,12 +2,15 @@
 
 ## Define
 - 이름이 없는 익명 함수
+- 함수처럼 stackFrame을 만들고, stack에서 실행됨.
+- **함수의 메모리 주소를 heap에 저장함**
 - 일급객체 
     1. 변수에 할당 가능
     2. 함수를 파라미터로 전달 가능(콜백함수)
-    3. 함수에서 함수를 반환할 수 있음)
+    3. 함수에서 함수를 반환할 수 있음
 
 아래 코드는 완전히 동일한 기능을 가지고 있음.
+
 ~~~swift
 // function
 func sumNumber(a: Int, b: Int) -> {
@@ -112,17 +115,18 @@ incrementer() // 30
 **즉, 함수가 종료되어도 closure는 존재하게 되는 것.**
 - 클로저를 외부 변수에 저장, 비동기 처리 등에 사용 된다.
 - @escaping 키워드를 사용하는 클로저에서는 self를 붙여주어야 한다.
+- 콜백함수가 옵셔널이라면, 기본적으로 컴파일러가 @escaping 키워드를 붙여준다.
 
 아래 코드는 Swift 공식문서에서 설명하는 @escaping 사용 예제이다.
 ~~~swift
 var completionHandlers: [() -> Void] = [] // 함수를 배열로 가지고 있는 변수
 
-// escaping closure
+// escaping closure (Dynamic Dispatch)
 func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
     completionHandlers.append(completionHandler) // 외부 변수 comletionHandlers에 파라미터로 받은 closure인 completionHandler를 append 하고 있다. (외부로 탈출시켜야함.)
 }
 
-// non-escaping closure
+// non-escaping closure (Direct Dispatch)
 func someFunctionWithNonescapingClosure(closure: () -> Void) {
     closure()    // 함수 안에서 끝나는 클로저
 }
@@ -141,7 +145,8 @@ class SomeClass {
 ~~~
 
 ## Capture List 캡처 리스트
-위에서 말한 closure의 캡처현상은 메모리 주소를 보관하게 된다. 만약 값의 메모리 주소를 복사해 공유하는 것이 아닌, 복사하고 싶다면 캡처리스트를 사용하면 된다.
+- 위에서 말한 closure의 캡처현상은 메모리 주소를 보관하게 된다. 만약 값의 메모리 주소를 복사해 공유하는 것이 아닌, 복사하고 싶다면 캡처리스트를 사용하면 된다.
+- closure 내부의 closure(중첩 클로저)의 경우, 상위 캡처리스트가 하위 클로저에도 적용된다.
 ~~~swift
 var myDog = "아무개"
 
