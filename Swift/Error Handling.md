@@ -27,5 +27,20 @@ do { // 에러가 나지 않는 경우 실행
     }
 }
 
+try? nameCheck(name: "세톨") // 이 문법도 가능함. 대신 오류일 때 nil 리턴
+
 // 에러 -> "invalidName"
+~~~
+
+## 에러를 던지는 함수를 처리하는 함수
+아래 코드와 같이 콜백함수가 에러를 던지고 있는 함수에서, 다시 에러를 던질 수 있다는 뜻의 키워드 retrows이다.
+~~~swift
+func rethrowsFunction(callback: () throws -> ()) rethrows {
+    do {
+        try callback()
+    } catch {
+        // 에러 다시 던지기
+        throw MyError.invalidName
+    }
+}
 ~~~
