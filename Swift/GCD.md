@@ -38,3 +38,7 @@ DispatchQueue.global(qos: background).async {
     // [5순위] background 실행과 관련된 작업
 }
 ~~~
+
+## Sync / Async
+- Sync(동기): 작업이 끝날때까지 기다림.
+- Async(비동기): 작업이 끝나는 것을 기다리지 않고 진행.
