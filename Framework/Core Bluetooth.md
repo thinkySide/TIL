@@ -48,5 +48,5 @@ class CBChracteristic
 2. Service 내의 Characteristic 검색.
 ***
 
-### Reference by
+### Ref.
 - [stacktree 님의 github](https://staktree.github.io/ios/iOS-Bluetooth-01-about-CoreBluetooth/#periphral%EC%9D%98-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B5%AC%EC%A1%B0%EC%99%80-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C)
