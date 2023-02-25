@@ -22,6 +22,7 @@
 
 
 ## Design Pattern
+- [Delegate 델리게이트](Design%20Pattern/Delegate.md)
 - [Singleton 싱글톤](Design%20Pattern/Singleton.md)
 ***
 
