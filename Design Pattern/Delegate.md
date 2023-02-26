@@ -46,7 +46,7 @@ func deliveData(data: String) {
 ~~~
 ※ Delegate를 위임하는 곳에서 가장 실수를 많이 한다. 만약 Delegate 패턴이 작동하지 않는 다면, 객체.delegate = self 이 구문에서 객체가 정확하게 전달되고 있는지 확인해보면 해결이 가능할 때가 많다. (ex: 해당 구문에서 vc를 let vc = SecodnViewController()로 만든다면 위임 받는 객체가 다른 객체이기 때문에 작동하지 않는다.)   
 
-아래 코드는 커스텀 Delegate 패턴 예제이다.
+아래 코드는 SecondViewController에서 FirstViewController에 데이터를 전달하는 커스텀 Delegate 패턴 예제이다.
 ~~~swift
 // DataDeliverDelegate.swift
 
