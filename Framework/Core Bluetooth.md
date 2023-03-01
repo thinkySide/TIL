@@ -1,4 +1,5 @@
 # Core Bluetooth 코어 블루투스
+개인연구소: https://github.com/thinkySide/Lab-CoreBluetooth   
 애플 공식 문서: https://developer.apple.com/documentation/corebluetooth
 
 ## 용어 정리
