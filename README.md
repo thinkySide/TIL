@@ -20,6 +20,9 @@
 - [Type Casting 타입 캐스팅](Swift/Type%20Casting.md)
 ***
 
+## Method
+- [Decimal point 소수점 다루기](Method/Decimal%20point.md)
+***
 
 ## Design Pattern
 - [Delegate 델리게이트](Design%20Pattern/Delegate.md)
