@@ -26,8 +26,9 @@
 ***
 
 ## Method
-- [Array 배열 다루기](Method/Array.md)
+- [Collection 컬렉션 다루기](Method/Collection.md)
 - [Decimal point 소수점 다루기](Method/Decimal%20point.md)
+- [Int 정수 다루기](Method/Integer.md)
 - [Networking 네트워킹](Method/Networking.md)
 - [Range 범위 다루기](Method/Range.md)
 - [readLine 입력 받기](Method/readLine.md)
