@@ -32,3 +32,30 @@ let array = [1, 50, 100].min { lhs, rhs in
 }
 // Optional(100) -> 부호 반대로 쓰면 최대값 반환
 ~~~
+
+<br>
+
+## ArraySlice
+- 요소를 잘라 배열에 추가 후 리턴합니다. (문자열만 확인)
+~~~swift
+ArraySlice("Mintol love ❤️")
+// ["M", "i", "n", "t", "o", "l", " ", "l", "o", "v", "e", " ", "❤️"]
+~~~
+
+<br>
+
+## swapAt(i:j:)
+- 컬렉션의 지정된 인덱스에서 값을 교환 후 반환합니다.
+
+~~~swift
+mutating func swapAt(
+    _ i: Self.Index, // 첫번째 교환값 인덱스
+    _ j: Self.Index // 두번째 교환값 인덱스
+)
+~~~
+
+~~~swift
+var array = ["🍎", "🍏"]
+array.swapAt(1, 0)
+// ["🍏", "🍎"]
+~~~

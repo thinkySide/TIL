@@ -32,6 +32,7 @@
 - [Networking 네트워킹](Method/Networking.md)
 - [Range 범위 다루기](Method/Range.md)
 - [readLine 입력 받기](Method/readLine.md)
+- [String 문자열 다루기](Method/String.md)
 ***
 
 ## Design Pattern
